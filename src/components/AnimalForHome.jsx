@@ -9,7 +9,7 @@ const AnimalForHome = async () => {
 
     return (
         <div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
                 {cowDataSlice.map((animal) => (
                     <div key={animal.id}>
                         <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -50,7 +50,7 @@ const AnimalForHome = async () => {
                                     </p>
                                 )}
 
-                                <Link href={`/animals/${animal.id}`}>
+                                <Link href={`/allanimals/${animal.id}`}>
                                     <button className="mt-3 w-full btn bg-blue-600 text-white py-2.5 rounded-xl font-medium hover:bg-blue-700 ">
                                         View Details
                                     </button>

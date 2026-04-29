@@ -8,3 +8,5 @@ export const ApiData = async () => {
     const cowData = await res.json()
     return cowData
 };
+
+

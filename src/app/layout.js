@@ -1,6 +1,6 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Navber from "@/components/Navber";
+import Navber from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const OutfitFont = Outfit({
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Navber></Navber>
-        <main className="container mx-auto">
+        <main className="container mx-auto mt-6">
           {children}
         </main>
         <Footer></Footer>
