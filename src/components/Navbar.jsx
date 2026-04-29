@@ -10,7 +10,7 @@ const Navber = () => {
         </>
     );
     return (
-        <div className="container mx-auto flex items-center justify-between mt-5">
+        <div className="container mx-auto flex items-center justify-between mt-5 bg-sky-200">
             <div className="flex gap-3 items-center">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">

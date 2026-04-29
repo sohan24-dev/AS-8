@@ -1,3 +1,6 @@
+import dns from "node:dns/promises";
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navber from "@/components/Navbar";
@@ -21,7 +24,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Navber></Navber>
-        <main className="container mx-auto mt-6">
+        <main className="container mx-auto mt-4">
           {children}
         </main>
         <Footer></Footer>
