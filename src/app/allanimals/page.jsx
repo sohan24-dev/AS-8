@@ -36,11 +36,11 @@ const Allanimals = async () => {
                                     </span>
                                 </p>
 
-                                {animal.price && (
+                                 (
                                     <p className="text-green-600 font-semibold">
                                         ৳ {animal.price}
                                     </p>
-                                )}
+                                )
 
                                 <Link href={`/allanimals/${animal.id}`}>
                                     <button className="mt-3 w-full btn bg-blue-600 text-white py-2.5 rounded-xl font-medium hover:bg-blue-700 ">

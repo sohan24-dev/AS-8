@@ -15,12 +15,13 @@ const DetailsPage = async ({ params }) => {
     return (
         <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden border">
 
-            <div className="relative w-full h-100 bg-gray-100">
+            <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-gray-100">
                 <Image
-                    src={animal.image}
-                    alt={animal.name}
+                    src={animal.image || "/no-image.jpg"}
+                    alt={animal.name || "Animal image"}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
 

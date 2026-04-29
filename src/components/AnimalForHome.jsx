@@ -16,7 +16,7 @@ const AnimalForHome = async () => {
 
                             {/* Image Section */}
                             <div className="relative w-full aspect-square bg-gray-100">
-                                {animal?.image ? (
+                                (
                                     <Image
                                         src={animal.image}
                                         alt={animal.name || "Animal image"}
@@ -24,11 +24,7 @@ const AnimalForHome = async () => {
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover"
                                     />
-                                ) : (
-                                    <div className="flex items-center justify-center h-full text-gray-400">
-                                        No Image Available
-                                    </div>
-                                )}
+                                ) 
                             </div>
 
                             {/* Content */}
