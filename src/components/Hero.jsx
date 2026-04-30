@@ -3,7 +3,8 @@ import Link from "next/link";
 
 const Hero = () => {
     return (
-        <section className="relative w-full h-[40vh] md:h-[70vh] flex items-center justify-center text-center overflow-hidden">
+       <div className="w-full">
+         <section className="relative  h-[40vh] md:h-[70vh] flex items-center justify-center text-center overflow-hidden">
 
             <Image
                 src="https://i.ibb.co.com/DHLyxkMc/Chat-GPT-Image-Apr-29-2026-09-44-02-PM.png"
@@ -34,6 +35,7 @@ const Hero = () => {
                 </Link>
             </div>
         </section>
+       </div>
     );
 };
 
