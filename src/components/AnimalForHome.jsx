@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const AnimalForHome = async () => {
     const cowData = await ApiData();
-    const cowDataSlice = cowData.slice(0,4)
+    const cowDataSlice = cowData.slice(0, 4)
 
     return (
         <div>
@@ -17,14 +17,14 @@ const AnimalForHome = async () => {
                             {/* Image Section */}
                             <div className="relative w-full aspect-square bg-gray-100">
                                 (
-                                    <Image
-                                        src={animal.image}
-                                        alt={animal.name || "Animal image"}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        className="object-cover"
-                                    />
-                                ) 
+                                <Image
+                                    src={animal.image}
+                                    alt={animal.name || "Animal image"}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    className="object-cover"
+                                />
+                                )
                             </div>
 
                             {/* Content */}
@@ -40,11 +40,11 @@ const AnimalForHome = async () => {
                                     </span>
                                 </p>
 
-                               
-                                    <p className="text-green-600 font-semibold">
-                                        ৳ {animal.price}
-                                    </p>
-                              
+
+                                <p className="text-green-600 font-semibold">
+                                    ৳ {animal.price}
+                                </p>
+
 
                                 <Link href={`/allanimals/${animal.id}`}>
                                     <button className="mt-3 w-full btn bg-blue-600 text-white py-2.5 rounded-xl font-medium hover:bg-blue-700 ">
@@ -55,6 +55,19 @@ const AnimalForHome = async () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className="flex justify-center mt-6">
+                <Link
+                    href="/allanimals"
+                    className="group inline-flex items-center gap-2 px-6 py-3 rounded-full 
+        bg-green-600 text-white font-medium shadow-md 
+        hover:bg-green-700 hover:shadow-lg transition-all duration-300"
+                >
+                    Explore All Animals
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                        →
+                    </span>
+                </Link>
             </div>
         </div>
     );

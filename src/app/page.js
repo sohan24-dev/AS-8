@@ -1,5 +1,6 @@
 import AnimalForHome from "@/components/AnimalForHome";
 import Hero from "@/components/Hero";
+import Tips from "@/components/Tips";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className="">
       <Hero></Hero>
       <AnimalForHome></AnimalForHome>
+      <Tips></Tips>
     </div>
   );
 }
