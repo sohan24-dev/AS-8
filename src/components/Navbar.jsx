@@ -1,8 +1,20 @@
+"use client"
+
+import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 
 
 const Navber = () => {
+    const {
+        data: session,
+        isPending, //loading state
+        error, //error object
+        refetch //refetch the session
+    } = authClient.useSession()
+    // console.log(session);
+    const user = session?.user
+
     const navberItems = (
         <>
             <li><Link href="/">Home</Link></li>
@@ -11,7 +23,7 @@ const Navber = () => {
         </>
     );
     return (
-        <div className="container mx-auto flex items-center justify-between mt-5 bg-sky-200">
+        <div className="container mx-auto flex items-center justify-between mt-5">
             <div className="flex gap-3 items-center">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -44,11 +56,31 @@ const Navber = () => {
                     {navberItems}
                 </ul>
             </div>
-            <div className="flex gap-3">
-                <Link href={'/login'}>Login</Link>
-                <Link href={'/register'}>Register</Link>
-            </div>
+            {
+                user ? <div className="flex gap-2">
+                    <div className="avatar">
+                        <div className="w-10 rounded-full ring ring-green-500 ring-offset-base-100 ring-offset-2 overflow-hidden">
+                            <Image
+                                src={user?.image || "/default-avatar.png"}
+                                alt="User Avatar"
+                                width={40}
+                                height={40}
+                                className="object-cover"
+                            />
+                        </div>
+                    </div>
+                    <button className="btn" onClick={() => authClient.signOut()}>Logout</button>
+                </div> : <div className="flex gap-3">
+                    <Link href={'/login'}>Login</Link>
+                    <Link href={'/register'}>Register</Link>
+                </div>
+            }
+
+
+
         </div>
+
+
     );
 };
 
