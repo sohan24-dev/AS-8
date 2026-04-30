@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -23,7 +24,20 @@ const Navber = () => {
                         {navberItems}
                     </ul>
                 </div>
-                <h2>Logo</h2>
+                <div className="flex items-center gap-2">
+                    <div className="bg-white p-1 rounded-full shadow-md">
+                        <Image
+                            src="https://i.ibb.co.com/YTK5R5Cq/Screenshot-2026-04-30-111117.png"
+                            alt="Qurbani Logo"
+                            width={36}
+                            height={36}
+                            className="rounded-full"
+                        />
+                    </div>
+                    <h1 className="text-2xl font-extrabold text-green-700">
+                        Qurbani
+                    </h1>
+                </div>
             </div>
             <div className="navbar-center hidden md:flex">
                 <ul className="menu menu-horizontal px-1">

@@ -84,7 +84,11 @@ const LoginPage = () => {
                         Submit
                     </button>
                 </form>
-
+                <div className="flex items-center my-6">
+                    <hr className="flex-1 border-gray-300" />
+                    <span className="mx-4 text-gray-500 text-sm">OR</span>
+                    <hr className="flex-1 border-gray-300" />
+                </div>
                 <button onClick={googleSignIn} className="btn flex items-center justify-center gap-3 w-full border-slate-500 py-2 rounded-lg">
                     <IoLogoGoogle className="text-slate-500 text-2xl" />
                     <span className="font-medium">Login with Google</span>
