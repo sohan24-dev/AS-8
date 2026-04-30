@@ -4,6 +4,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { IoLogoGoogle } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
     const {
