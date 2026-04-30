@@ -27,10 +27,13 @@ const Profile = () => {
                 <h2 className="text-lg sm:text-xl text-center md:text-2xl font-semibold text-gray-800">
                     {user?.name || "Guest User"}
                 </h2>
-
-            <div className="flex justify-center">
-                <ModelUpdateUser></ModelUpdateUser>
-            </div>
+                <p className="text-center text-sm sm:text-base text-gray-500 mt-1">
+                    {user?.email || "No email available"}
+                </p>
+                <div className="my-4 border-t"></div>
+                <div className="flex justify-center">
+                    <ModelUpdateUser></ModelUpdateUser>
+                </div>
             </div>
         </div>
     );

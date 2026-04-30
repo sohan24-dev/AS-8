@@ -1,3 +1,5 @@
+import "animate.css";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,12 +18,12 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black/60"></div>
 
        
-            <div className="relative z-10 text-white px-4 max-w-3xl">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
+            <div className=" relative z-10 text-white px-4 max-w-3xl">
+                <h1 className="animate__animated animate__backInDown text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
                     Find Healthy Animals for Qurbani
                 </h1>
 
-                <p className="text-base md:text-lg lg:text-xl mb-6 text-gray-200">
+                <p className="animate__animated animate__rotateInUpRight text-base md:text-lg lg:text-xl mb-6 text-gray-200">
                     Explore cows, goats, and more with full details and best prices
                 </p>
 

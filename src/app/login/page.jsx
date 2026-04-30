@@ -85,6 +85,12 @@ const LoginPage = () => {
                         Submit
                     </button>
                 </form>
+                <p className="text-center">
+                    Don't have an account?
+                    <Link className="text-red-400 text-xl font-semibold ml-1" href={"/register"}>
+                        Sign up here
+                    </Link>
+                </p>
                 <div className="flex items-center my-6">
                     <hr className="flex-1 border-gray-300" />
                     <span className="mx-4 text-gray-500 text-sm">OR</span>

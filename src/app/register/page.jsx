@@ -4,6 +4,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { IoLogoGoogle } from "react-icons/io";
 
 const RegisterPage = () => {
     const router = useRouter();
@@ -32,6 +33,11 @@ const RegisterPage = () => {
             alert("Registration successful!");
             router.push("/");
         }
+    }
+    const googleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
     }
     return (
         <div className=" min-h-[80vh] flex items-center justify-center bg-linear-to-br from-gray-100 to-gray-200 px-4">
@@ -108,10 +114,24 @@ const RegisterPage = () => {
                         type="submit"
                         className="btn w-full bg-blue-500 hover:bg-blue-600 text-white text-sm sm:text-base font-semibold rounded-lg transition"
                     >
-                        Submit
+                        SignUp
                     </button>
                 </form>
-                <p className="text-center">Have an account ? <Link className="text-red-400 text-xl font-semibold" href={"/login"}>Login</Link></p>
+                <p className="text-center">
+                    Already have an account?
+                    <Link className="text-red-400 text-xl font-semibold ml-1" href={"/login"}>
+                        Sign in here
+                    </Link>
+                </p>
+                <div className="flex items-center my-6">
+                    <hr className="flex-1 border-gray-300" />
+                    <span className="mx-4 text-gray-500 text-sm">OR</span>
+                    <hr className="flex-1 border-gray-300" />
+                </div>
+                <button onClick={googleSignIn} className="btn flex items-center justify-center gap-3 w-full border-slate-500 py-2 rounded-lg">
+                    <IoLogoGoogle className="text-slate-500 text-2xl" />
+                    <span className="font-medium">Login with Google</span>
+                </button>
             </div>
         </div>
     );
