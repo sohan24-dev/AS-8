@@ -1,3 +1,4 @@
+import SortItem from "@/components/SortItem";
 import { ApiData } from "@/shared/ApiData";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,9 +6,13 @@ import Link from "next/link";
 const Allanimals = async () => {
     const cowData = await ApiData();
 
+
     return (
         <div>
-            <h2>All animals</h2>
+            <div className="flex items-center justify-between">
+                <h2>All Animals </h2>
+                <SortItem cowData={cowData}></SortItem>
+            </div>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {cowData.map((animal) => (
@@ -36,11 +41,11 @@ const Allanimals = async () => {
                                     </span>
                                 </p>
 
-                                 
-                                    <p className="text-green-600 font-semibold">
-                                        ৳ {animal.price}
-                                    </p>
-                                
+
+                                <p className="text-green-600 font-semibold">
+                                    ৳ {animal.price}
+                                </p>
+
 
                                 <Link href={`/allanimals/${animal.id}`}>
                                     <button className="mt-3 w-full btn bg-blue-600 text-white py-2.5 rounded-xl font-medium hover:bg-blue-700 ">
