@@ -82,7 +82,7 @@ const LoginPage = () => {
                         type="submit"
                         className="w-full btn bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300 font-semibold"
                     >
-                        Submit
+                        signIn
                     </button>
                 </form>
                 <p className="text-center">
