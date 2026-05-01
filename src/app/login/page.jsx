@@ -25,10 +25,10 @@ const LoginPage = () => {
         });
         // console.log(error);
         if (error) {
-            alert(`${error.message}`)
+            toast.error(`${error.message}`)
         }
         else if (res) {
-            alert("Login successful!");
+            toast.success("Login successful!");
         }
     }
     const googleSignIn = async () => {

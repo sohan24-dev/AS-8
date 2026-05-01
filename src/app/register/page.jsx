@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { IoLogoGoogle } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
     const router = useRouter();
@@ -27,10 +28,10 @@ const RegisterPage = () => {
         });
         // console.log(error);
         if (error) {
-            alert(`${error.message}`)
+            toast.error(`${error.message}`)
         }
         else if (res) {
-            alert("Registration successful!");
+            toast.success("Registration successful!");
             router.push("/");
         }
     }

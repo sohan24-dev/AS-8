@@ -1,6 +1,6 @@
 # 🐄 Qurbani Management System
 
-> A modern, full-stack web application to simplify Qurbani (Eid-ul-Adha) animal booking, management, and tracking with a smooth user experience and transparent workflow.
+> A modern web application to simplify Qurbani (Eid-ul-Adha) animal booking, management, and tracking with a smooth user experience and transparent workflow.
 
 ---
 
@@ -20,7 +20,6 @@ Built with a focus on **speed, responsiveness, and usability**, this project dem
 
 ---
 
-## 🎯 Key Features
 
 ### 👤 User Side
 - 🔍 Browse available Qurbani animals
@@ -42,21 +41,13 @@ Built with a focus on **speed, responsiveness, and usability**, this project dem
 ### Frontend
 - ⚛️ Next.js / React.js
 - 🎨 Tailwind CSS
-- 🎬 Framer Motion (animations)
 - 📱 Responsive UI Design
 
-### Backend (if used)
-- 🟢 Node.js
-- 🚂 Express.js
 
 ### Database
-- 🍃 MongoDB / Firebase
+- 🍃 MongoDB 
 
 ### Authentication
-- 🔐 NextAuth / Firebase Auth
+- 🔐 NextAuth 
 
----
 
-## 📸 UI Preview
-
-> Add your screenshots below

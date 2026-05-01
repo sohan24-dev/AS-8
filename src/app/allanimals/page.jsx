@@ -1,21 +1,61 @@
-import SortItem from "@/components/SortItem";
+"use client";
+
+import { useEffect, useState } from "react";
 import { ApiData } from "@/shared/ApiData";
 import Image from "next/image";
 import Link from "next/link";
 
-const Allanimals = async () => {
-    const cowData = await ApiData();
+const Allanimals = () => {
+    const [animals, setAnimals] = useState([]);
 
+    // fetch data
+    useEffect(() => {
+        const loadData = async () => {
+            const data = await ApiData();
+            setAnimals(data);
+        };
+        loadData();
+    }, []);
+
+    const SortHandle = (type) => {
+        let sortedData = [...animals];
+
+        if (type === "low") {
+            sortedData.sort((a, b) => a.price - b.price);
+        } else if (type === "high") {
+            sortedData.sort((a, b) => b.price - a.price);
+        }
+
+        setAnimals(sortedData); 
+    };
 
     return (
         <div>
-            <div className="flex items-center justify-between">
-                <h2>All Animals </h2>
-                <SortItem cowData={cowData}></SortItem>
+            <div className="flex items-center justify-between my-4">
+                <h2 className="text-xl font-medium">All Animals</h2>
+
+                <div className="dropdown dropdown-end">
+                    <div tabIndex={0} role="button" className="btn m-1">
+                        Sort ⬇️
+                    </div>
+
+                    <ul className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <li>
+                            <button onClick={() => SortHandle("low")}>
+                                Price: Low → High
+                            </button>
+                        </li>
+                        <li>
+                            <button onClick={() => SortHandle("high")}>
+                                Price: High → Low
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {cowData.map((animal) => (
+                {animals.map((animal) => (
                     <div key={animal.id}>
                         <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
