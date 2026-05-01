@@ -15,8 +15,8 @@ Built with a focus on **speed, responsiveness, and usability**, this project dem
 
 ## 🚀 Live Demo
 
-🔗 **Live Website:** [Click Here](#)  
-📂 **GitHub Repo:** [Click Here](#)
+🔗 **Live Website:** https://ass-08.vercel.app 
+📂 **GitHub Repo:** https://github.com/sohan24-dev/AS-8
 
 ---
 
@@ -36,7 +36,6 @@ Built with a focus on **speed, responsiveness, and usability**, this project dem
 
 ---
 
-## ⚙️ Tech Stack
 
 ### Frontend
 - ⚛️ Next.js / React.js
