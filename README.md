@@ -15,7 +15,8 @@ Built with a focus on **speed, responsiveness, and usability**, this project dem
 
 ## 🚀 Live Demo
 
-🔗 **Live Website:** https://ass-08.vercel.app 
+🔗 **Live Website:** https://ass-08.vercel.app  </br>
+
 📂 **GitHub Repo:** https://github.com/sohan24-dev/AS-8
 
 ---
@@ -47,6 +48,6 @@ Built with a focus on **speed, responsiveness, and usability**, this project dem
 - 🍃 MongoDB 
 
 ### Authentication
-- 🔐 NextAuth 
+- 🔐 betterAuth 
 
 

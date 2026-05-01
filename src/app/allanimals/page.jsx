@@ -36,7 +36,7 @@ const Allanimals = () => {
 
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn m-1">
-                        Sort ⬇️
+                        Sort by price ⬇️
                     </div>
 
                     <ul className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
