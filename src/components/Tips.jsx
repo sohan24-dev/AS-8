@@ -19,7 +19,9 @@ const data = {
 
 export default function Tips() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+    <div>
+      <h1 className="text-center my-4 font-bold text-3xl">Qurbani Tips and Top Breeds</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
 
       <div className="rounded-2xl shadow-lg border p-5 bg-white">
         <h2 className="text-xl font-bold mb-4"> Qurbani Tips</h2>
@@ -39,6 +41,7 @@ export default function Tips() {
         </ul>
       </div>
 
+    </div>
     </div>
   );
 }

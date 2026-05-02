@@ -50,4 +50,32 @@ Built with a focus on **speed, responsiveness, and usability**, this project dem
 ### Authentication
 - 🔐 betterAuth 
 
+### 📦 Dependencies
+@better-auth/mongo-adapter
+animate.css
+better-auth
+mongodb
+next
+react
+react-dom
+react-hook-form
+react-icons
+react-toastify
 
+
+### Dev Dependencies
+@tailwindcss/postcss
+babel-plugin-react-compiler
+daisyui
+eslint
+eslint-config-next
+tailwindcss
+
+# Navigate into the project
+cd AS-8
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
