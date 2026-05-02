@@ -92,9 +92,9 @@ const Navber = () => {
                         </ul>
                     </div>
                     <div className="flex items-center gap-1">
-                        <div className="bg-white p-1 rounded-full shadow-md">
+                        <div className="">
                             <Image
-                                src="https://i.ibb.co.com/YTK5R5Cq/Screenshot-2026-04-30-111117.png"
+                                src="https://i.ibb.co.com/DHd0JY9L/Screenshot-2026-04-30-111117-removebg-preview.png"
                                 alt="Qurbani Logo"
                                 width={36}
                                 height={36}
