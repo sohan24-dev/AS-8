@@ -27,13 +27,12 @@ const Hero = () => {
                     Explore cows, goats, and more with full details and best prices
                 </p>
 
-                <Link>
-                    <button className="btn px-6 py-3 rounded-full text-white font-semibold 
+
+                <button className="btn px-6 py-3 rounded-full text-white font-semibold 
   bg-black/30 backdrop-blur-lg border border-white/20 
   hover:bg-black/40 transition">
-                        Browse Animals
-                    </button>
-                </Link>
+                    Browse Animals
+                </button>
             </div>
         </section>
     );
