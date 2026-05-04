@@ -22,6 +22,11 @@ const Navber = () => {
             ? "text-blue-600 font-semibold border border-blue-600"
             : "text-gray-700 hover:text-blue-500";
 
+
+    const handleLogout = () => {
+        authClient.signOut()
+    }
+
     const navberItems = (
         <>
             <li>
@@ -126,7 +131,7 @@ const Navber = () => {
                             </div>
                         </div>
                         <Link href={'/login'}
-                            onClick={() => authClient.signOut()}
+                            onClick={handleLogout}
                             className="btn px-5 py-2 rounded-lg bg-red-500 text-white font-medium 
              hover:bg-red-600 active:scale-95 transition-all duration-200
              shadow-md hover:shadow-lg"
