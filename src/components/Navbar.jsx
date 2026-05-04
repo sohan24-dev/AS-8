@@ -112,7 +112,8 @@ const Navber = () => {
                     </ul>
                 </div>
                 {
-                    user ? <div className="flex gap-2">
+                    user ? <div className="flex gap-2 items-center">
+                        <h2>Hello {user?.name?.split(" ")[0]}</h2>
                         <div className="avatar">
                             <div className="w-10 rounded-full ring ring-green-500 ring-offset-base-100 ring-offset-2 overflow-hidden">
                                 <Image
