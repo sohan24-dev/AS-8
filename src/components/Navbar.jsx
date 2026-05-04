@@ -124,14 +124,14 @@ const Navber = () => {
                                 />
                             </div>
                         </div>
-                        <button
+                        <Link href={'/login'}
                             onClick={() => authClient.signOut()}
                             className="btn px-5 py-2 rounded-lg bg-red-500 text-white font-medium 
              hover:bg-red-600 active:scale-95 transition-all duration-200
              shadow-md hover:shadow-lg"
                         >
                             Logout
-                        </button>
+                        </Link>
                     </div> : <div className="flex gap-3 mr-2">
                         <div className="flex items-center gap-3">
                             <Link

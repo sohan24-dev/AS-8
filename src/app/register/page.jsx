@@ -32,7 +32,8 @@ const RegisterPage = () => {
         }
         else if (res) {
             toast.success("Registration successful!");
-            router.push("/");
+            authClient.signOut()
+            router.push("/login");
         }
     }
     const googleSignIn = async () => {
