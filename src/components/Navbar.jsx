@@ -24,7 +24,8 @@ const Navber = () => {
 
 
     const handleLogout = () => {
-        authClient.signOut()
+        authClient.signOut();
+        window.location.reload
     }
 
     const navberItems = (
